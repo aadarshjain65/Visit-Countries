@@ -105,11 +105,7 @@ class VisitCountries extends Component {
   }
 
   deleteVisitedCountry = id => {
-    const {countriesList} = this.state
-    const filteredCountries = countriesList.filter(
-      eachCountry => eachCountry.id !== id,
-    )
-    this.setState({countriesList: filteredCountries})
+    this.addVisitedCountry(id)
   }
 
   render() {
